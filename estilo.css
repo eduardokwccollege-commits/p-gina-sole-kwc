@@ -1,0 +1,252 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #1473b3;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+/* Estilos de la lista de navegación */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos de cada elemento de la lista */
+.nav-item {
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para las opciones de menú */
+.nav-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos de los enlaces de la barra de navegación */
+.nav-item a {
+    font-size: 27px;
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+/* Estilos para el contenedor del logo principal */
+.logo-karol {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para la imagen del logo principal */
+.logo {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+/* Estilos para la sección del carrusel */
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto; /* Centra el carrusel */
+    overflow: hidden; /* Oculta las imágenes que no están en el carrusel */
+    border-radius: 50px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que la pista tenga el ancho del contenedor */
+}
+
+/* Estilos para las imágenes del carrusel */
+.imagenprincipal {
+    width: 100%; /* Cada imagen ocupa el 100% del carrusel */
+    min-width: 100%; /* Evita que las imágenes se encojan */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* Estilos para los botones del carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que los botones estén sobre las imágenes */
+}
+.carousel-button.prev {
+    left: 20px;
+    border-radius: 50%;
+}
+.carousel-button.next {
+    right: 20px;
+    border-radius: 50%;
+}
+
+/* Estilos de la sección "Niveles" */
+.niveles {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.niveles h2 {
+    font-size: 2.5rem;
+    color: rgb(236, 14, 14);
+    margin-bottom: 2rem;
+}
+
+.niveles-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.card {
+    border-radius: 30px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px rgb(7, 96, 148);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el fondo de cada tarjeta */
+.card.inicial {
+    background-color: #a02b2b;
+}
+
+.card.primaria {
+    background-color: #ada61ead;
+}
+
+.card.secundaria {
+    background-color: #000d36b7;
+}
+
+.card h3 {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+.card p {
+    padding: 1rem;
+    font-size: 0.95rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+.card button {
+    background-color: #198bd6;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Efecto hover para el botón */
+.card button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #0e89db;
+    color: #ca1616;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 2%;
+}
+
+/* Estilos para el contenedor del logo del pie de página */
+.logo-pie {
+    display: flex;
+    justify-content: left;
+}
+
+/* Estilos para la imagen del logo del pie de página */
+.logo2 {
+    width: 50%;
+    max-width: 30%;
+    height: auto;
+}
+
+/* Estilos para los párrafos en el pie de página */
+.footer-content p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Estilos para los enlaces en el pie de página */
+.footer-content a {
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+/* Estilos para los enlaces al pasar el mouse por encima */
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0px 10px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.social-links a i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: translateY(-5px);
+}
