@@ -1,0 +1,462 @@
+svg {
+    position: fixed;     /* Fija la posición del SVG en la ventana (no se mueve al hacer scroll). */
+    bottom: 60px;        /* Lo coloca a 60px del borde inferior. */
+    right: 30px;         /* Lo coloca a 30px del borde derecho. */
+    transition: .3s ease;/* Aplica una transición suave de 0.3s a los cambios de estilo. */
+}
+svg:hover {
+    transform: translateY(-6px); /* Al pasar el ratón, mueve el SVG 6px hacia arriba (efecto de elevación). */
+}
+
+.tiktoksvg {
+    position: fixed;     /* Fija la posición del SVG de TikTok. */
+    bottom: 140px;       /* Lo coloca a 140px del borde inferior (más arriba que el otro SVG). */
+    right: 30px;         /* Lo coloca a 30px del borde derecho. */
+    transition: .3s ease;/* Aplica una transición suave. */
+}
+body {
+    font-family: 'Inter', sans-serif; /* Define la tipografía principal. */
+    margin: 0;                       /* Elimina el margen predeterminado del cuerpo. */
+    background-color: #f0f4f8;        /* Establece un color de fondo gris claro. */
+    color: #333;                     /* Establece el color de texto principal a gris oscuro. */
+}
+        
+.header {
+    /* Crea un fondo con un degradado horizontal de azul a rojo. */
+    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d); 
+    color: white;                    /* Texto blanco en el encabezado. */
+    padding: 20px;                   /* Relleno interno de 20px. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil. */
+    border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda. */
+    border-bottom-right-radius: 10px;/* Redondea la esquina inferior derecha. */
+    
+}
+
+/* Contenedor del logo y el texto, ahora centrado */
+.logo-section {
+    display: flex;                   /* Habilita Flexbox. */
+    flex-direction: column;          /* Coloca los elementos verticalmente. */
+    align-items: center;             /* Centra horizontalmente el contenido (ejes cruzados en column). */
+    text-align: center;              /* Centra el texto. */
+    margin-bottom: 10px;             /* Espacio debajo del logo/texto. */
+}
+
+.logo-section img {
+    height: 150px;                   /* Define la altura del logo. */
+    margin-bottom: 0px;              /* Elimina el espacio bajo la imagen. */
+}
+
+.logo-text h1 {
+    margin: 0;                       /* Elimina el margen predeterminado. */
+    font-size: 2em;                  /* Tamaño de fuente grande. */
+    font-weight: 700;                /* Texto en negrita. */
+}
+
+.logo-text p {
+    margin: 0;                       /* Elimina el margen predeterminado. */
+    font-size: 1em;                  /* Tamaño de fuente estándar. */
+    font-style: italic;              /* Texto en cursiva. */
+    opacity: 0.9;                    /* Texto ligeramente transparente. */
+}
+
+.nav-menu {
+    display: flex;                   /* Habilita Flexbox para alinear los enlaces. */
+    list-style: none;                /* Quita las viñetas de la lista. */
+    justify-content: center;         /* Centra los elementos horizontalmente. */
+    gap: 60px;                       /* Espacio de 60px entre cada enlace. */
+    margin-bottom: -10px; /* Agrega un margen negativo para 'tirar' el contenido hacia arriba */
+    padding-bottom: 10px;          /* Relleno inferior para separar del borde del header. */
+}
+
+.nav-menu li a {
+    color: white;                    /* Color de texto blanco. */
+    text-decoration: none;           /* Quita el subrayado de los enlaces. */
+    font-size: 1.5em;                  /* Tamaño de fuente estándar. */
+    font-weight: 700;                /* Texto en negrita. */
+    padding: 10px 15px;              /* Relleno alrededor del texto del enlace. */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover. */
+    border-radius: 5px;              /* Esquinas ligeramente redondeadas. */
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco transparente al pasar el ratón. */
+    color: #ffc107;                  /* Color de texto amarillo/ámbar al pasar el ratón. */
+}
+
+.main-content {
+  
+    text-align: center;              /* Centra el texto dentro del contenedor. */
+}
+
+.fila {
+    display: flex;                   /* Habilita Flexbox para crear una fila de elementos. */
+    gap: 40px;                       /* Espacio de 40px entre los elementos. */
+    align-items: center;             /* Alinea verticalmente los elementos al centro. */
+    justify-content: center;         /* Centra la fila horizontalmente. */
+    margin-top: 30px;                /* Margen superior de 30px. */
+    flex-wrap: wrap;                 /* Permite que los elementos se envuelvan en pantallas pequeñas. */
+}
+
+.texto {
+    flex: 1;                         /* Permite que este elemento crezca y ocupe espacio. */
+    max-width: 500px;                /* Limita el ancho máximo del bloque de texto. */
+    text-align: left;                /* Alinea el texto a la izquierda dentro de su bloque. */
+}
+
+
+/*botón volver atrás*/
+/*Contenedor del botón, alineado a la izquierda */
+.back-button-container {
+    width: 100%; /* Ocupa todo el ancho */
+    padding-bottom: 0px; /* Espacio debajo del botón */
+    grid-column: 1 / -1; /* Permite que el botón ocupe toda la fila en el grid de .content */
+}
+
+.back-button {
+    display: flex; /* Habilita flexbox para el icono y el texto */
+    align-items: center; /* Centra verticalmente el contenido */
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 10px 20px;
+    background-color: #045cb0; /* Azul principal de tu header */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Por si se usa como <a> */
+}
+
+.back-button:hover {
+    background-color: #f00e1c; /* Color de acento rojo de tu header */
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button svg {
+    position: static; /* Anula el 'position: fixed' que tenías en tus SVGs flotantes */
+    width: 24px;
+    height: 24px;
+    stroke: white;
+    transition: none; /* Anula cualquier transición flotante */
+}
+/*-------------------------------------------------------------*/
+
+/* Modificación al contenedor de contenido para que el botón "Volver" no interfiera con el layout flex/grid */
+.content {
+    display: flex; 
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-right: 115px;
+    padding-left: 115px; 
+}
+
+/* Reajustamos el .content para que el botón ocupe una fila completa antes del layout de la galería */
+@media (min-width: 769px) {
+    .content {
+        display: grid;
+        /* Define dos columnas: una para la imagen grande y otra para la galería */
+        grid-template-columns: 40% 1fr; 
+        gap: 30px;
+    }
+    .large-image-container-wrapper {
+        grid-column: 1 / 2; /* Coloca el wrapper de la imagen grande en la primera columna */
+    }
+    .gallery {
+        grid-column: 2 / 3; /* Coloca la galería en la segunda columna */
+    }
+    /* Asegura que el botón ocupe toda la fila antes de la galería */
+    .back-button-container {
+        grid-column: 1 / -1; 
+    }
+}
+
+/* Aseguramos que el botón no esté fijo ni tenga comportamientos extraños */
+.back-button-container svg, .back-button svg {
+    position: static !important;
+    bottom: auto !important;
+    right: auto !important;
+}
+
+/* Ajuste para que la imagen grande se mantenga en su columna con el wrapper */
+.large-image-container-wrapper {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 40%; 
+    /* Elimina esta propiedad si usas el grid de arriba, ya que el grid maneja el layout */
+    /* position: sticky;
+    top: 20px; */
+} 
+
+.content {
+    display: flex;                   /* Habilita Flexbox para la galería y la imagen grande. */
+    gap: 30px;                       /* Espacio de 30px entre los contenedores. */
+    flex-wrap: wrap;                 /* Permite el envolvimiento. */
+    padding-top: 20px;                /* Relleno vertical. */
+    padding-right: 115px;
+    padding-left: 115px; 
+}
+      /* Contenedor wrapper para permitir el efecto sticky en desktop */
+.large-image-container-wrapper {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 40%; 
+}    
+.large-image-container {
+     /* Aplica el sticky para que la imagen se quede fija al hacer scroll */
+    flex: 1;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(255, 1, 1, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: sticky;
+    top: 20px;            /* Altura mínima de 400px. */
+}
+
+.large-image-container img {
+    max-width: 100%;                 /* La imagen no excede el ancho del contenedor. */
+    max-height: 100%;                /* La imagen no excede la altura del contenedor. */
+    object-fit: contain;             /* Ajusta la imagen completa sin recortarla. */
+    border-radius: 8px;              /* Esquinas de la imagen ligeramente redondeadas. */
+}
+
+.placeholder {
+    color: #0044ff;              /* Color gris para el texto de marcador de posición. */
+    font-size: 1.2em;                /* Tamaño de fuente ligeramente más grande. */
+    text-align: center;              /* Centra el texto. */
+    padding: 20px;                   /* Relleno interno. */
+}
+
+.gallery {
+    flex: 2;                         /* Crece el doble que la imagen grande (proporción 2). */
+    display: grid;                   /* Habilita CSS Grid. */
+    /* Crea columnas que se ajustan automáticamente, con un ancho mínimo de 200px. */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;                       /* Espacio entre las miniaturas. */
+    min-width: 300px;                /* Ancho mínimo de la galería. */
+}
+        
+.image-card {
+    background: white;               /* Fondo blanco. */
+    border-radius: 12px;             /* Esquinas redondeadas. */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el hover. */
+    cursor: pointer;                 /* Muestra el cursor de puntero (indica que es interactiva). */
+    aspect-ratio: 1;                 /* Asegura que la tarjeta sea un cuadrado (1:1). */
+}
+        
+.image-card:hover {
+    transform: translateY(-5px);     /* Mueve la tarjeta 5px hacia arriba al pasar el ratón. */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al pasar el ratón. */
+}
+        
+.image-card.active {
+    transform: scale(0.95);          /* Reduce la tarjeta a 95% de su tamaño (efecto de clic). */
+    /* Borde azul de 3px y sombra sutil. */
+    box-shadow: 0 0 0 3px #d80b0b, 0 6px 15px rgba(0, 0, 0, 0.1); 
+}
+        
+.image-container {
+    height: 100%;                    /* Altura completa del contenedor. */
+    overflow: hidden;                /* Oculta cualquier parte de la imagen que desborde. */
+    display: flex;                   /* Habilita Flexbox. */
+    align-items: center;             /* Centra verticalmente la imagen. */
+    justify-content: center;         /* Centra horizontalmente la imagen. */
+    background: #f8f9fa;             /* Fondo gris claro. */
+    border-radius: 10px;
+}
+        
+.image-container img {
+    width: 100%;                     /* Ancho completo de la imagen. */
+    height: 100%;                    /* Altura completa de la imagen. */
+    object-fit: cover;               /* Cubre todo el espacio, recortando si es necesario. */
+    transition: transform 0.5s ease; /* Transición para el efecto de zoom. */
+}
+        
+.image-card:hover .image-container img {
+    transform: scale(1.05);          /* Zoom del 5% a la imagen al pasar el ratón. */
+}
+
+
+/*Pie de Página*/
+.main-footer {
+    /* Mismo degradado de azul a rojo que el encabezado. */
+    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
+    color: white;                    /* Texto blanco en el pie de página. */
+    padding-top: 40px;               /* Relleno superior. */
+    padding-bottom: 20px;            /* Relleno inferior. */
+    border-top-left-radius: 0.5rem;  /* Redondea la esquina superior izquierda. */
+    border-top-right-radius: 0.5rem; /* Redondea la esquina superior derecha. */
+    margin-top: 2rem;                /* Margen superior. */
+}
+
+.footer-content-wrapper {
+    display: flex;                   /* Habilita Flexbox para las secciones del footer. */
+    justify-content: space-around;   /* Distribuye el espacio uniformemente entre las secciones. */
+    align-items: flex-start;         /* Alinea las secciones en la parte superior. */
+    max-width: 1200px;               /* Ancho máximo del contenido del footer. */
+    margin: 0 auto;                  /* Centra el contenedor horizontalmente. */
+    flex-wrap: wrap;                 /* Permite que las secciones se envuelvan. */
+    gap: 30px;                       /* Espacio entre las secciones. */
+    box-sizing: border-box;          /* Incluye el padding en el ancho total. */
+}
+
+.footer-logo-container {
+    min-width: 200px;                /* Ancho mínimo de 200px. */
+    text-align: left;                /* Alinea el texto a la izquierda. */
+    flex-grow: 1;                    /* Permite que el contenedor crezca. */
+}
+
+.footer-logo {
+    width: 480px;                    /* Ancho deseado para el logo. */
+    max-width: 100%;                 /* Asegura que el logo no desborde en pantallas pequeñas. */
+    height: auto;                    /* Mantiene la proporción. */
+    display: block;                  /* Muestra como bloque. */
+}
+
+.footer-section {
+    text-align: left;                /* Alinea el texto de la sección a la izquierda. */
+    padding: 0 15px;                 /* Relleno lateral. */
+    flex-grow: 1;                    /* Permite que la sección crezca. */
+    min-width: 200px;                /* Ancho mínimo para cada sección. */
+    box-sizing: border-box;          /* Incluye padding en el ancho total. */
+}
+
+.footer-section h4 {
+    font-size: 1em;                  /* Tamaño de fuente estándar. */
+    margin-bottom: 8px;              /* Margen inferior. */
+    color: #faf6f6;                  /* Color de texto casi blanco. */
+    font-weight: normal;             /* Grosor normal de la fuente. */
+    text-transform: uppercase;       /* Convierte el texto a mayúsculas. */
+    text-align: center;              /* Centra el título de la sección. */
+}
+
+.footer-section p {
+    margin: 0;                       /* Elimina el margen. */
+    font-size: 0.95em;               /* Fuente ligeramente más pequeña. */
+    line-height: 1.4;                /* Espaciado entre líneas. */
+}
+
+.phone-number {
+    font-size: 1.5em;                /* Fuente grande para el número de teléfono. */
+    font-weight: bold;               /* Texto en negrita. */
+    margin-bottom: 5px;              /* Margen inferior. */
+    text-align: center;              /* Centra el número de teléfono. */
+}
+
+.note {
+    font-size: 0.8em;                /* Fuente pequeña para la nota. */
+    opacity: 0.8;                    /* Ligeramente transparente. */
+    text-align: center;              /* Centra la nota. */
+}
+
+.social-icons {
+    display: flex;                   /* Habilita Flexbox. */
+    gap: 15px;                       /* Espacio entre iconos. */
+    margin-top: 10px;                /* Margen superior. */
+    justify-content: center;         /* Centra los iconos horizontalmente. */
+}
+
+.social-icons img {
+    width: 40px;                     /* Ancho de los iconos. */
+    height: auto;                    /* Altura automática. */
+}
+
+
+.social-icons a:hover img {
+    transform: translateY(-3px);     /* Mueve el icono 3px hacia arriba al pasar el mouse. */
+}
+
+.libro img {
+    width: 150px;                    /* Ancho de la imagen del libro de reclamaciones. */
+    height: auto;                    /* Altura automática. */
+    display: block;                  /* Muestra como bloque. */
+    margin: 0 auto;                  /* Centra la imagen horizontalmente. */
+}
+
+.main-footer .linea1 {
+    border: none;                    /* Elimina el borde. */
+    border-top: 1px solid rgb(255, 255, 255); /* Crea una línea separadora blanca de 1px. */
+    width: 90%;                      /* Ancho de la línea del 90%. */
+    max-width: 1200px;               /* Ancho máximo de la línea. */
+    margin: 30px auto 15px auto;     /* Centra la línea y le da margen vertical. */
+}
+
+.fin p {
+    text-align: center;              /* Centra el texto final. */
+    margin: 5px 0;                   /* Espacio vertical. */
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) { /* Se aplica cuando la pantalla es de 768px o menos (móvil/tablet). */
+    .header {
+        flex-direction: column;      /* Apila verticalmente los elementos del encabezado. */
+        padding: 15px;               /* Reduce el relleno. */
+    }
+
+    .logo-section {
+        margin-bottom: 10px;         /* Ajusta el margen inferior. */
+    }
+
+    .nav-menu {
+        justify-content: center;     /* Centra el menú. */
+        gap: 10px;                   /* Reduce el espacio entre enlaces a 10px. */
+        flex-wrap: wrap;             /* Permite que el menú se envuelva en varias líneas. */
+    }
+
+    .fila {
+        flex-direction: column;      /* Apila verticalmente los elementos de la fila. */
+        align-items: center;         /* Centra horizontalmente los elementos apilados. */
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) { /* Se aplica cuando la pantalla es de 768px o menos (móvil/tablet). */
+    .header {
+        flex-direction: column;      /* Apila verticalmente los elementos del encabezado. */
+        padding: 15px;               /* Reduce el relleno. */
+    }
+
+    .logo-section {
+        margin-bottom: 10px;         /* Ajusta el margen inferior. */
+    }
+
+    .nav-menu {
+        justify-content: center;     /* Centra el menú. */
+        gap: 10px;                   /* Reduce el espacio entre enlaces a 10px. */
+        flex-wrap: wrap;             /* Permite que el menú se envuelva en varias líneas. */
+    }
+
+    .fila {
+        flex-direction: column;      /* Apila verticalmente los elementos de la fila. */
+        align-items: center;         /* Centra horizontalmente los elementos apilados. */
+    }
+}
+/* Media Query para Móviles: reajustamos el .content a una sola columna */
+@media (max-width: 768px) {
+    .content {
+        display: flex; /* Vuelve a flexbox para apilar */
+        flex-direction: column;
+        padding-right: 20px; /* Reduce el padding lateral */
+        padding-left: 20px; /* Reduce el padding lateral */
+        gap: 20px; /* Ajusta el espacio */
+    }
+    .large-image-container {
+        position: static; /* Desactiva el sticky en móviles */
+        top: auto;
+        min-height: 250px;
+    }
+    .large-image-container-wrapper {
+        max-width: 100%; /* Ocupa todo el ancho */
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Miniaturas más pequeñas en móvil */
+    }
+    .back-button-container {
+        padding-bottom: 15px;
+    }
+}    

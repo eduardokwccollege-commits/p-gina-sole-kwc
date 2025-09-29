@@ -1,0 +1,223 @@
+svg {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    transition: .3s ease;
+    }
+svg:hover {
+    transform: translateY(-6px);}
+
+.tiktoksvg {
+    position: fixed;
+    bottom: 140px;
+    right: 30px;
+    transition: .3s ease;
+    }    
+
+    body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.header {
+background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Contenedor del logo y el texto, ahora centrado */
+.logo-section {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 10px; /* Espacio entre el logo y el menú */
+}
+
+.logo-section img {
+    height: 150px; /* Tamaño del logo ajustado para que sea más pequeño */
+    margin-bottom: 0px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 1em;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos del menú */
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffc107;
+}
+
+
+.folleto_anual{
+    margin: 0 auto; /* Agrega un margen de 150px al lado izquierdo (para escritorio). */
+    width: 50%; /* Establece un ancho de 250px. */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    display: block; /* Muestra la imagen como un bloque para poder aplicar márgenes. */
+    margin-top: 20px; /* Agrega un margen de 20px en la parte superior. */
+    border-radius: 8px; /* Redondea las esquinas de la imagen. */
+
+}
+
+h1{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center; /* Centra el encabezado H1. */
+    color: #0e7edf;
+}
+
+iframe {
+    width: 90%; /* Establece un ancho del 90% para el mapa. */
+    height: 400px; /* Altura fija para el mapa. */
+    border: 0; /* Elimina el borde del iframe. */
+    display: block; /* Muestra el iframe como un bloque. */
+    margin: 40px auto; /* Centra el iframe horizontalmente y le da margen vertical. */
+    border-radius: 30px; /* Redondea las esquinas del mapa. */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Agrega una sombra al mapa. */
+}
+
+
+/*Pie de Página*/
+.main-footer {
+    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
+    color: white; /* Define el color de texto de todo el footer. */
+    padding-top: 40px; /* Espacio interno superior. */
+    padding-bottom: 20px; /* Espacio interno inferior. */
+    border-top-left-radius: 0.5rem; /* Redondea la esquina superior izquierda. */
+    border-top-right-radius: 0.5rem; /* Redondea la esquina superior derecha. */
+    margin-top: 2rem; /* Margen superior. */
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.footer-content-wrapper {
+    display: flex; /* Usa Flexbox para organizar el contenido interno. */
+    justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos. */
+    align-items: flex-start; /* Alinea los elementos en la parte superior. */
+    max-width: 1200px; /* Ancho máximo para el contenido. */
+    margin: 0 auto; /* Centra el contenedor horizontalmente. */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea. */
+    gap: 30px; /* Espacio entre los elementos flexibles. */
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra. */
+}
+
+.footer-logo-container {
+    min-width: 200px; /* Ancho mínimo para este contenedor. */
+    text-align: left; /* Alinea el texto a la izquierda. */
+    flex-grow: 1; /* Permite que el contenedor crezca para ocupar el 
+    espacio disponible. */
+}
+
+.footer-logo {
+    width: 480px; /* Establece un ancho para el logo. */
+    max-width: 100%; /* Asegura que el logo nunca sea más grande que su contenedor. */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    display: block; /* Muestra la imagen como un bloque. */
+}
+
+.footer-section {
+    text-align: left; /* Alinea el texto de la sección a la izquierda. */
+    padding: 0 15px; /* Espacio interno lateral. */
+    flex-grow: 1; /* Permite que la sección crezca para ocupar el espacio disponible. */
+    min-width: 200px; /* Ancho mínimo para cada sección. */
+    box-sizing: border-box; /* Incluye padding en el ancho total. */
+}
+
+.footer-section h4 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1em; /* Tamaño de la fuente del título de la sección. */
+    margin-bottom: 8px; /* Margen inferior. */
+    color: #faf6f6; /* Color del texto del título. */
+    font-weight: normal; /* Grosor de la fuente. */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas. */
+    text-align: center;
+
+}
+
+.footer-section p {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0; /* Elimina el margen de los párrafos. */
+    font-size: 0.95em; /* Tamaño de la fuente. */
+    line-height: 1.4; /* Espaciado entre líneas. */
+}
+
+.phone-number {
+    
+    font-size: 1.5em; /* Tamaño de la fuente del número de teléfono. */
+    font-weight: bold; /* Hace el texto más grueso. */
+    margin-bottom: 5px; /* Margen inferior. */
+    text-align: center;
+}
+
+.note {
+    
+    font-size: 0.8em; /* Tamaño de la fuente de la nota. */
+    opacity: 0.8; /* Hace que el texto sea ligeramente transparente. */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex; /* Usa Flexbox para alinear los íconos. */
+    gap: 15px; /* Espacio entre cada ícono. */
+    margin-top: 10px; /* Margen superior. */
+    justify-content: center; /* Alinea los íconos al inicio del contenedor. */
+}
+
+.social-icons img {
+    width: 40px; /* Ancho de los íconos. */
+    height: auto; /* La altura se ajusta automáticamente. */
+}
+
+.social-icons a:hover img {
+    transform: translateY(-3px); /* Mueve el ícono 3px hacia arriba 
+    al pasar el mouse. */
+}
+.libro img {
+    width: 150px; /* Ancho de la imagen del libro. */
+    height: auto; /* La altura se ajusta automáticamente. */
+    display: block; /* Muestra la imagen como un bloque. */
+    margin: 0 auto; /* Centra la imagen horizontalmente. */
+}
+.main-footer .linea1 {
+    border: none; /* Elimina el borde. */
+    border-top: 1px solid rgb(255, 255, 255); /* Crea una línea superior semitransparente. */
+    width: 90%; /* Ancho de la línea. */
+    max-width: 1200px; /* Ancho máximo. */
+    margin: 30px auto 15px auto; /* Centra la línea y le da margen vertical. */
+}
+
+.fin p {
+    text-align: center; /* Centra el texto. */
+    margin: 5px 0; /* Espacio vertical entre los párrafos. */
+}
