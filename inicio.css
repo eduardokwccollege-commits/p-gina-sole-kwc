@@ -195,8 +195,8 @@ body {
         }
 
 .header {
-    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
-    color: white;
+    background: linear-gradient(white);
+    color: #045cb0;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -240,7 +240,7 @@ body {
 }
 
 .nav-menu li a {
-    color: white;                   /* Color de texto blanco. */
+    color: #045cb0;                   /* Color de texto blanco. */
     text-decoration: none;          /* Quita el subrayado de los enlaces. */
     font-size: 1.5em;                 /* Tamaño de fuente estándar. */
     font-weight: 700;               /* Texto en negrita. */
@@ -758,7 +758,7 @@ h2 {
 }
 
 .social-sidebar h4 {
-    color: white;                   /* Texto blanco */
+    color: #045cb0;                   /* Texto blanco */
     margin-bottom: 15px;            /* Espacio de 15px debajo */
 }
 
@@ -802,8 +802,8 @@ h2 {
 
 
 .main-footer {
-    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
-    color: white; /* Define el color de texto de todo el footer. */
+    background: linear-gradient(white);
+    color: #045cb0; /* Define el color de texto de todo el footer. */
     padding-top: 40px; /* Espacio interno superior. */
     padding-bottom: 20px; /* Espacio interno inferior. */
     border-top-left-radius: 0.5rem; /* Redondea la esquina superior izquierda. */
@@ -848,7 +848,7 @@ h2 {
 .footer-section h4 {
     font-size: 1em; /* Tamaño de la fuente del título de la sección. */
     margin-bottom: 8px; /* Margen inferior. */
-    color: #faf6f6; /* Color del texto del título. */
+    color: #045cb0; /* Color del texto del título. */
     font-weight: normal; /* Grosor de la fuente. */
     text-transform: uppercase; /* Convierte el texto a mayúsculas. */
     text-align: center;
@@ -865,12 +865,6 @@ h2 {
     font-size: 1.5em; /* Tamaño de la fuente del número de teléfono. */
     font-weight: bold; /* Hace el texto más grueso. */
     margin-bottom: 5px; /* Margen inferior. */
-    text-align: center;
-}
-
-.note {
-    font-size: 0.8em; /* Tamaño de la fuente de la nota. */
-    opacity: 0.8; /* Hace que el texto sea ligeramente transparente. */
     text-align: center;
 }
 
@@ -898,8 +892,8 @@ h2 {
     margin: 0 auto; /* Centra la imagen horizontalmente. */
 }
 .main-footer .linea1 {
-    
-    border-top: 1px solid rgb(255, 255, 255); /* Crea una línea superior semitransparente. */
+    border: none;
+    border-top: 1px solid #045cb0; /* Crea una línea superior celeste. */
     width: 90%; /* Ancho de la línea. */
     max-width: 1200px; /* Ancho máximo. */
     margin: 30px auto 15px auto; /* Centra la línea y le da margen vertical. */
@@ -983,7 +977,10 @@ h2 {
 
     /* HEADER: Ajustes de Logo y Menú */
     .logo-section img {
-        height: 100px; /* Logo más pequeño en móvil */
+        width: 480px; /* Establece un ancho para el logo. */
+    max-width: 100%; /* Asegura que el logo nunca sea más grande que su contenedor. */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    display: block; /* Muestra la imagen como un bloque. */
     }
 
     /* Menú de Navegación: Pasa a ser vertical (o un menú hamburguesa, si tienes JS) */

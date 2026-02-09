@@ -23,13 +23,12 @@ body {
         
 .header {
     /* Crea un fondo con un degradado horizontal de azul a rojo. */
-    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d); 
+    background: linear-gradient(white);
     color: white;                    /* Texto blanco en el encabezado. */
     padding: 20px;                   /* Relleno interno de 20px. */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil. */
-    border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda. */
-    border-bottom-right-radius: 10px;/* Redondea la esquina inferior derecha. */
-    
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* Contenedor del logo y el texto, ahora centrado */
@@ -69,7 +68,7 @@ body {
 }
 
 .nav-menu li a {
-    color: white;                    /* Color de texto blanco. */
+    color: #045cb0;                    /* Color de texto blanco. */
     text-decoration: none;           /* Quita el subrayado de los enlaces. */
     font-size: 1.5em;                  /* Tamaño de fuente estándar. */
     font-weight: 700;                /* Texto en negrita. */
@@ -285,8 +284,8 @@ body {
 /*Pie de Página*/
 .main-footer {
     /* Mismo degradado de azul a rojo que el encabezado. */
-    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
-    color: white;                    /* Texto blanco en el pie de página. */
+    background: white;
+    color: #045cb0;                    /* Texto blanco en el pie de página. */
     padding-top: 40px;               /* Relleno superior. */
     padding-bottom: 20px;            /* Relleno inferior. */
     border-top-left-radius: 0.5rem;  /* Redondea la esquina superior izquierda. */
@@ -329,7 +328,7 @@ body {
 .footer-section h4 {
     font-size: 1em;                  /* Tamaño de fuente estándar. */
     margin-bottom: 8px;              /* Margen inferior. */
-    color: #faf6f6;                  /* Color de texto casi blanco. */
+    color: #045cb0;                  /* Color de texto casi blanco. */
     font-weight: normal;             /* Grosor normal de la fuente. */
     text-transform: uppercase;       /* Convierte el texto a mayúsculas. */
     text-align: center;              /* Centra el título de la sección. */
@@ -380,7 +379,7 @@ body {
 
 .main-footer .linea1 {
     border: none;                    /* Elimina el borde. */
-    border-top: 1px solid rgb(255, 255, 255); /* Crea una línea separadora blanca de 1px. */
+    border-top: 1px solid #045cb0; /* Crea una línea separadora celeste de 1px. */
     width: 90%;                      /* Ancho de la línea del 90%. */
     max-width: 1200px;               /* Ancho máximo de la línea. */
     margin: 30px auto 15px auto;     /* Centra la línea y le da margen vertical. */
