@@ -1,97 +1,3 @@
-/* ==============================================
-   CSS General (Aplica a todos los dispositivos)
-   ============================================== */
-
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background-color: #f0f4f8;
-    color: #333;
-}
-
-/* Botones Flotantes (WhatsApp y TikTok) */
-svg {
-    position: fixed;
-    bottom: 60px;
-    right: 30px;
-    width: 60px; /* Tamaño base reducido */
-    height: auto;
-    transition: .3s ease;
-    z-index: 1000; /* Asegura que estén por encima de todo */
-}
-svg:hover {
-    transform: translateY(-6px);
-}
-
-.tiktoksvg {
-    bottom: 110px; /* Ajuste para que TikTok esté encima de WhatsApp */
-}
-
-/* --- ESTILO CLAVE PARA EL RELOJ --- */
-#current-time {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.3em;
-    font-weight: 600;
-    color: #ffffff;
-    text-align: right;
-    line-height: 1.3;
-    z-index: 100;
-}
-
-.header {
-    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
-    color: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    position: relative;
-}
-
-/* Contenedor del logo y el texto, ahora centrado */
-.logo-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.logo-section img {
-    height: 150px;
-    margin-bottom: 0px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 700;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
-}
-
-.nav-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffc107;
-}
-
-.main-content {
-    padding: 40px;
-    text-align: center;
-}
 
 h1 {
     color: #0e7edf;
@@ -123,7 +29,7 @@ h2 {
     min-width: 300px;
 }
 
-.carrusel {
+.carruselnos {
     flex: 1;
     max-width: 400px;
     position: relative;
@@ -184,112 +90,39 @@ iframe {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.main-footer {
-    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
-    color: white; /* Define el color de texto de todo el footer. */
-    padding-top: 40px; /* Espacio interno superior. */
-    padding-bottom: 20px; /* Espacio interno inferior. */
-    border-top-left-radius: 0.5rem; /* Redondea la esquina superior izquierda. */
-    border-top-right-radius: 0.5rem; /* Redondea la esquina superior derecha. */
-    margin-top: 2rem; /* Margen superior. */
-}
 
-.footer-content-wrapper {
-    display: flex; /* Usa Flexbox para organizar el contenido interno. */
-    justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos. */
-    align-items: flex-start; /* Alinea los elementos en la parte superior. */
-    max-width: 1200px; /* Ancho máximo para el contenido. */
-    margin: 0 auto; /* Centra el contenedor horizontalmente. */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea. */
-    gap: 30px; /* Espacio entre los elementos flexibles. */
-    box-sizing: border-box; /* Asegura que el padding no añada ancho extra. */
-}
-
-.footer-logo-container {
-    min-width: 200px; /* Ancho mínimo para este contenedor. */
-    text-align: left; /* Alinea el texto a la izquierda. */
-    flex-grow: 1; /* Permite que el contenedor crezca para ocupar el 
-    espacio disponible. */
-}
-
-.footer-logo {
-    width: 480px; /* Establece un ancho para el logo. */
-    max-width: 100%; /* Asegura que el logo nunca sea más grande que su contenedor. */
-    height: auto; /* Mantiene la proporción de la imagen. */
-    display: block; /* Muestra la imagen como un bloque. */
-}
-
-.footer-section {
-    text-align: left; /* Alinea el texto de la sección a la izquierda. */
-    padding: 0 15px; /* Espacio interno lateral. */
-    flex-grow: 1; /* Permite que la sección crezca para ocupar el espacio disponible. */
-    min-width: 200px; /* Ancho mínimo para cada sección. */
-    box-sizing: border-box; /* Incluye padding en el ancho total. */
-}
-
-.footer-section h4 {
-    font-size: 1em; /* Tamaño de la fuente del título de la sección. */
-    margin-bottom: 8px; /* Margen inferior. */
-    color: #faf6f6; /* Color del texto del título. */
-    font-weight: normal; /* Grosor de la fuente. */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas. */
-    text-align: center;
-
-}
-
-.footer-section p {
-    margin: 0; /* Elimina el margen de los párrafos. */
-    font-size: 0.95em; /* Tamaño de la fuente. */
-    line-height: 1.4; /* Espaciado entre líneas. */
-}
-
-.phone-number {
-    font-size: 1.5em; /* Tamaño de la fuente del número de teléfono. */
-    font-weight: bold; /* Hace el texto más grueso. */
-    margin-bottom: 5px; /* Margen inferior. */
-    text-align: center;
-}
-
-.note {
-    font-size: 0.8em; /* Tamaño de la fuente de la nota. */
-    opacity: 0.8; /* Hace que el texto sea ligeramente transparente. */
-    text-align: center;
-}
-
-.social-icons {
-    display: flex; /* Usa Flexbox para alinear los íconos. */
-    gap: 15px; /* Espacio entre cada ícono. */
-    margin-top: 10px; /* Margen superior. */
-    justify-content: center; /* Alinea los íconos al inicio del contenedor. */
-}
-
-.social-icons img {
-    width: 40px; /* Ancho de los íconos. */
-    height: auto; /* La altura se ajusta automáticamente. */
-}
-
-.social-icons a:hover img {
-    transform: translateY(-3px); /* Mueve el ícono 3px hacia arriba 
-    al pasar el mouse. */
-}
-
-.libro img {
-    width: 150px; /* Ancho de la imagen del libro. */
-    height: auto; /* La altura se ajusta automáticamente. */
-    display: block; /* Muestra la imagen como un bloque. */
-    margin: 0 auto; /* Centra la imagen horizontalmente. */
-}
-.main-footer .linea1 {
+/* Media Query para Móviles (ejemplo: hasta 768px) */
+@media (max-width: 768px) {
     
-    border-top: 1px solid rgb(255, 255, 255); /* Crea una línea superior semitransparente. */
-    width: 90%; /* Ancho de la línea. */
-    max-width: 1200px; /* Ancho máximo. */
-    margin: 30px auto 15px auto; /* Centra la línea y le da margen vertical. */
-}
+    /* 1. APILAMIENTO DE TEXTO Y CARRUSEL */
+    .fila {
+        /* Fuerza a los elementos a apilarse verticalmente en lugar de uno al lado del otro */
+        flex-direction: column; 
+        /* Quita el padding lateral que pueda tener en móvil para dejar más espacio al texto */
+        padding: 0 15px; 
+        gap: 20px; /* Reduce el espacio entre el texto y el carrusel en móvil */
+    }
 
-.fin p {
-    text-align: center; /* Centra el texto. */
-    margin: 5px 0; /* Espacio vertical entre los párrafos. */
-}
+    .texto {
+        /* En móvil, el texto debe ocupar todo el ancho disponible */
+        max-width: 100%; 
+        min-width: unset; /* Quita el min-width forzado para desktop */
+        text-align: justify; /* Opcional: Justifica el texto para mejor lectura */
+    }
 
-      
+    /* 2. AJUSTE DEL CARRUSEL EN MÓVIL */
+    .carruselnos {
+        /* Ocupa casi todo el ancho disponible para verse más grande */
+        max-width: 100%; 
+        width: 100%;
+        /* Ajusta la altura del carrusel para que la imagen se vea más grande */
+        aspect-ratio: 16/10; /* Un aspecto de 16:10 o 4/3 es bueno para móviles */
+        margin: 0; /* Quita el margen superior forzado, ya usamos el gap */
+    }
+    
+    /* 3. Ajuste de los títulos */
+    h1, h2 {
+        /* Reduce el tamaño de los títulos en móvil */
+        font-size: 1.6em;
+    }
+}

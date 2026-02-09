@@ -1,0 +1,1083 @@
+/* --- ICONOS FLOTANTES --- */
+.whatsapp-float, .tiktok-float {
+    position: fixed;
+    right: 20px;
+    transition: transform .3s ease;
+    z-index: 1000;
+}
+.whatsapp-float:hover, .tiktok-float:hover {
+    transform: translateY(-6px);
+}
+
+.whatsapp-float {
+    bottom: 20px;
+}
+
+.tiktok-float {
+    bottom: 120px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Contenedor principal con grid para 3 columnas */
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+        }
+
+/* BARRA LATERAL IZQUIERDA */
+.sidebar-left {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    
+        }
+
+.sidebar-left h3 {
+    color: #045cb0;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #f00e1c;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 0;  /** Elimina el margen superior */ 
+
+    }
+
+.contact-widget {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.quick-links {
+    list-style: none;
+        }
+
+.quick-links li {
+    margin-bottom: 12px;
+        }
+
+.quick-links a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+        }
+
+.quick-links a:hover {
+    background: linear-gradient(90deg, #045cb0, #f00e1c);
+    color: white;
+    transform: translateX(5px);
+        }
+
+.quick-links i {
+    margin-right: 10px;
+    width: 20px;
+        } 
+        
+.info-box {
+    background: linear-gradient(135deg, #045cb0, #f00e1c);
+    color: white;
+    padding: 1.2px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px; 
+        }
+
+.info-box h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+        }
+
+.info-box p {
+    font-size: 0.9rem;
+    font-weight: bold;
+        }
+
+
+/* Estilos para la Imagen AI de la barra lateral */
+.imagen-ai-container {
+    margin-top: 30px; /* Espacio sobre la imagen */
+    padding: 10px;
+    background-color: #eaf3fa; /* Fondo claro para resaltar */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-ai-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto;
+    border-radius: 5px; /* Bordes suaves para la imagen */
+    display: block; /* Asegura que no haya espacio extra debajo */
+}
+
+/* Efecto hover opcional para la imagen */
+.imagen-ai-container img:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* --- REPRODUCTOR DE MÚSICA --- */
+.audio {
+  width: 100%;        /* Ocupa todo el ancho */
+}
+
+.partecanciones {
+    margin-top: 10px;/*Agrega 10 píxeles de espacio en la parte superior*/
+    gap: 10px;/*Crea 10 píxeles de separación entre los elementos hijos*/
+    flex-wrap: wrap;/*Permite que los elementos hijos pasen a la siguiente línea */
+    display: flex; /* Utiliza Flexbox para organizar los elementos */
+}
+
+
+
+.canciones {
+    display: flex; /* Convierte el elemento en un contenedor flexible */
+    background: linear-gradient(135deg, #f8f9fa);
+    border-radius: 8px; /*Redondea las esquinas con 8px de radio*/
+    font-weight: bold;/*Texto en negrita*/
+    font-size: 0.85rem;/*Tamaño de fuente de 0.85rem (∼13-14px)*/
+    text-align: center;/*Centra el texto horizontalmente*/
+    min-width: 190px; /*Ancho mínimo de 200 píxeles*/
+    padding: 8px 12px;/*8px arriba/abajo, 12px izquierda/derecha de espacio interno*/
+    align-items: center; /* Centra verticalmente los elementos hijos */     
+}
+
+.canciones:hover {
+    background: #e3f2fd; /* Color de fondo de los eventos */
+    transform: translateX(-5px); /* Desplazamiento de los eventos */
+    box-shadow: 0 4px 30px rgba(185, 22, 22, 0.1); /* Sombra de los eventos */
+    color: var(--color-texto-principal); /* Cambia el color del texto para que sea legible */
+    transition: all 0.3s; /* Transición suave para el hover */
+}
+
+.canciones:hover .namesong {
+    color: #114ab4; /* Asegura que el texto del nombre también cambie */
+}
+
+.imgcan {
+    width: 80px; /* Tamaño ajustado */
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.namesong {
+    margin: 0;
+    color: #114ab4;
+    text-align: center; /* Alinea el texto a la derecha */
+    padding-left: 15px; /* Espacio entre la imagen y el texto */
+}
+
+
+
+/* CONTENIDO CENTRAL */
+.main-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);      
+        }
+
+.header {
+    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Contenedor del logo y el texto, ahora centrado */
+.logo-section {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 10px; /* Espacio entre el logo y el menú */
+}
+
+.logo-section img {
+    height: 150px; /* Tamaño del logo ajustado para que sea más pequeño */
+    margin-bottom: 0px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 1em;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.nav-menu {
+    display: flex;                  /* Habilita Flexbox para alinear los enlaces. */
+    list-style: none;               /* Quita las viñetas de la lista. */
+    justify-content: center;        /* Centra los elementos horizontalmente. */
+    gap: 60px;                      /* Espacio de 60px entre cada enlace. */
+    margin-bottom: -10px; /* Agrega un margen negativo para 'tirar' el contenido hacia arriba */
+    padding-bottom: 10px;          /* Relleno inferior para separar del borde del header. */
+}
+
+.nav-menu li a {
+    color: white;                   /* Color de texto blanco. */
+    text-decoration: none;          /* Quita el subrayado de los enlaces. */
+    font-size: 1.5em;                 /* Tamaño de fuente estándar. */
+    font-weight: 700;               /* Texto en negrita. */
+    padding: 10px 15px;             /* Relleno alrededor del texto del enlace. */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover. */
+    border-radius: 5px;             /* Esquinas ligeramente redondeadas. */
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco transparente al pasar el ratón. */
+    color: #ffc107;                 /* Color de texto amarillo/ámbar al pasar el ratón. */
+}
+/* CONTENEDOR PRINCIPAL CON GRID - Debajo del header */
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 20px;
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.main-section {
+    width: 100%;
+}
+
+/* SIDEBAR CALENDARIO - A la derecha */
+
+/* ESTILOS DEL RELOJ */
+.clock-widget {
+    background: linear-gradient(135deg, #f00e1c, #045cb0); /* Degradado rojo y azul */
+    color: white;
+    font-size: 1.7rem; /* Tamaño de fuente grande */
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Espacio entre el reloj y el calendario */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Consolas', 'Courier New', monospace; /* Fuente de estilo digital/monoespacio */
+}
+
+
+.sidebar-calendar {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.calendar-widget {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+    color: #045cb0;
+    font-size: 1.2rem;
+    margin: 0;
+    
+}
+
+.calendar-nav {
+    background: linear-gradient(90deg, #045cb0, #f00e1c);
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.calendar-nav:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.day-name {
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-date {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.calendar-date:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.05);
+}
+
+.calendar-date.today {
+    background: linear-gradient(135deg, #045cb0, #f00e1c);
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-date.other-month {
+    color: #ccc;
+}
+
+.calendar-date.event-day {
+    background-color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.calendar-date.event-day::after {
+    content: '•';
+    position: absolute;
+    bottom: 2px;
+    color: #f00e1c;
+    font-size: 1.2rem;
+}
+
+/* EVENTOS WIDGET */
+.events-widget {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.events-widget h3 {
+    color: #f00e1c;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #045cb0;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 0;  /** Elimina el margen superior */ 
+}
+
+.event-item {
+    display: flex;
+    gap: 15px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.event-item:hover {
+    background: #e3f2fd;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.event-date {
+    background: linear-gradient(135deg, #045cb0, #f00e1c);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+    min-width: 50px;
+}
+
+h5 {
+    color: white;
+    font-size: 1rem; /* TAMAÑO AUMENTADO A 2rem (32px) */
+}
+
+.event-info h4 {
+    color: #045cb0;
+    font-size: 0.95rem;
+    margin: 0 0 5px 0;
+}
+
+.event-info p {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+
+/* CONTENIDO PRINCIPAL */
+
+.main-content {
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #0e7edf;
+    font-size: 2em;
+    text-align: center;
+}
+
+.fila {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.texto {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Estilos para la sección del carrusel */
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto; /* Centra el carrusel */
+    overflow: hidden; /* Oculta las imágenes que no están en el carrusel */
+    border-radius: 50px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que la pista tenga el ancho del contenedor */
+}
+
+/* Estilos para las imágenes del carrusel */
+.imagenprincipal {
+    width: 100%; /* Cada imagen ocupa el 100% del carrusel */
+    min-width: 100%; /* Evita que las imágenes se encojan */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* Estilos para los botones del carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que los botones estén sobre las imágenes */
+}
+.carousel-button.prev {
+    left: 20px;
+    border-radius: 50%;
+}
+.carousel-button.next {
+    right: 20px;
+    border-radius: 50%;
+}
+
+/* NIVELES */
+
+.niveles {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.niveles h2 {
+    font-size: 2.5rem;
+    color: rgb(236, 14, 14);
+    margin-bottom: 2rem;
+}
+
+.niveles-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.card {
+    border-radius: 30px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px rgb(7, 96, 148);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el fondo de cada tarjeta */
+.card.inicial {
+    background-color: #a02b2b;
+}
+
+.card.primaria {
+    background-color: #098b1f;
+}
+
+.card.secundaria {
+    background-color: #000d36b7;
+}
+
+.card h3 {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+.card p {
+    padding: 1rem;
+    font-size: 0.95rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+.card button {
+    background-color: #198bd6;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Efecto hover para el botón */
+.card button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.title-container{/* Contenedor del título centrado */
+   text-align: center;
+   margin-bottom: 3.5rem;
+   margin-top: 3rem;
+
+}
+
+.containerh1 {
+    font-size: 2.5rem;
+    color: rgb(236, 14, 14);
+    margin-bottom: 1.5rem;
+}
+
+.containerp {
+    font-size: 1.4rem;
+    color: rgb(107, 107, 107);
+    margin-bottom: 1rem;
+}
+
+/* Estilos base de la tarjeta TARJETAS DE PILARES*/
+.cards {
+    padding: 2.5rem; /* Más padding para más espacio interno */
+    border-radius: 0.75rem; /* Esquinas redondeadas */
+    min-height: 380px; /* Altura mínima para asegurar uniformidad visual */
+    display: flex; /* Habilita Flexbox para ordenar el contenido verticalmente */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    justify-content: space-between; /* Empuja el enlace "Conoce más" al fondo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Define una transición suave para efectos hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra inicial sutil */
+      /* Propiedades para la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la tarjeta */
+    background-position: center; /* Centra la imagen de fondo */
+    position: relative; /* Necesario para posicionar la capa de superposición (overlay) */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del borde redondeado */
+    color: white; /* Color del texto dentro de la tarjeta */
+}
+
+ /* Capa de Superposición (Overlay) para Oscurecer la Imagen y Mejorar Contraste */
+.cards::before {
+    content: ''; /* Crea el pseudo-elemento */
+    position: absolute; /* Posiciona la capa de forma absoluta */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; /* Extiende la capa por toda la tarjeta */
+    z-index: 1; /* Coloca la capa *debajo* del texto (que tiene z-index: 2) */
+    /* Degradado oscuro para que el texto blanco resalte */
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.65) 100%);
+    transition: background-image 0.3s ease; /* Transición para el efecto hover en el overlay */
+        }
+
+.cards:hover {
+    /* Efecto de elevación y zoom ligero al pasar el ratón */
+    transform: translateY(-5px) scale(1.01);
+    /* Sombra más pronunciada para simular mayor elevación */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); 
+}
+
+    /* Efecto de hover: hacer la imagen ligeramente más brillante o más oscura */
+.cards:hover::before {
+    /* Hace el degradado un poco más transparente en el hover */
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%);
+  }
+
+    /* Aseguramos que todo el contenido (iconos, texto, enlaces) esté sobre el overlay */
+.cards-icon, .cards-title, .cards-text, .cards-link, .content {
+    position: relative; /* Necesario para que z-index funcione */
+    z-index: 2; /* Asegura que el contenido esté sobre el overlay (z-index: 1) */
+   }
+
+    /* Estilos de contenido */
+.cards-icon {
+    font-size: 3rem; /* Tamaño grande para el ícono */
+    margin-bottom: 1.5rem; /* Espacio debajo del ícono */
+    line-height: 1; /* Altura de línea ajustada */
+    color: #ffffff; /* Iconos siempre blancos */
+}
+
+.cards-title {
+    font-size: 1.5rem; /* Tamaño del título */
+    font-weight: 800; /* Fuente extra negrita */
+    margin-bottom: 0.5rem; /* Espacio debajo del título */
+    line-height: 1.2; /* Altura de línea ajustada */
+    }
+
+.cards-text {
+    font-size: 1rem; /* Tamaño normal del texto */
+    line-height: 1.6; /* Altura de línea cómoda para la lectura */
+    margin-bottom: 1.5rem; /* Espacio debajo del párrafo */
+      }
+
+.cards-link {
+    color: #ffffff; /* Color blanco para el enlace */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    font-weight: 700; /* Fuente negrita */
+    margin-top: auto; /* Empuja el enlace al final de la tarjeta (gracias a Flexbox) */
+    display: inline-block; /* Permite que la transición funcione correctamente */
+    transition: text-decoration 0.3s ease; /* Transición suave para el subrayado */
+        }
+
+.cards-link:hover {
+    text-decoration: underline; /* Muestra el subrayado al pasar el ratón */
+        }
+
+ /* Asignación de Imágenes de Fondo (Rutas a tu carpeta local 'images') */
+
+.card-blue {
+    background-image: url('images/danza.png'); /* Carga la imagen para la Tarjeta 1 */
+        }
+
+.card-green {
+    background-image: url('images/cole.jpg'); /* Carga la imagen para la Tarjeta 2 */
+        }
+
+.card-orange {
+    background-image: url('images/profesores.jpg'); /* Carga la imagen para la Tarjeta 3 */
+        }
+
+.card-yellow {
+    background-image: url('images/primaria.jpg'); /* Carga la imagen para la Tarjeta 4 */
+        }
+
+        /* Grid Layout (2x2 en escritorio, 1x1 en móvil) */
+.main-container {
+    max-width: 1200px; /* Limita el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    display: grid; /* Habilita CSS Grid */
+    grid-template-columns: 1fr; /* Una sola columna para móviles por defecto */
+    gap: 24px; /* Espacio entre las tarjetas */
+    margin-bottom: 3rem; /* Espacio inferior */
+
+}
+
+.social-sidebar {
+    background: linear-gradient(135deg, #045cb0, #f00e1c); /* Degradado azul a rojo */
+    padding: 15px;                  /* Espacio interno de 15px */
+    border-radius: 10px;            /* Esquinas redondeadas de 10px */
+    margin-top: 20px;               /* Espacio de 20px arriba */
+    text-align: center;             /* Centra el contenido */
+}
+
+.social-sidebar h4 {
+    color: white;                   /* Texto blanco */
+    margin-bottom: 15px;            /* Espacio de 15px debajo */
+}
+
+.social-icons-sidebar {
+    display: flex;                  /* Activa flexbox */
+    justify-content: center;        /* Centra los íconos */
+    gap: 10px;                      /* Espacio de 10px entre íconos */
+    flex-wrap: wrap;                /* Permite envolver íconos */
+}
+
+.social-icons-sidebar a {
+    width: 40px;                    /* Ancho fijo de 40px */
+    height: 40px;                   /* Altura fija de 40px (círculo) */
+    background: white;              /* Fondo blanco */
+    border-radius: 50%;             /* Forma circular */
+    display: flex;                  /* Activa flexbox */
+    align-items: center;            /* Centra verticalmente */
+    justify-content: center;        /* Centra horizontalmente */
+    transition: all 0.3s;           /* Transición suave */
+    text-decoration: none;          /* Sin subrayado */
+}
+
+.social-icons-sidebar a:hover {
+    transform: scale(1.2);          /* Aumenta el tamaño 20% al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Agrega sombra en hover */
+}
+
+.social-icons-sidebar i {
+    font-size: 1.2rem;              /* Tamaño del ícono */
+    color: #045cb0;                 /* Color azul institucional */
+}
+
+
+@media (min-width: 768px) { /* Media query: se aplica solo a pantallas de 768px o más (tabletas y escritorio) */
+.main-container {
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual ancho */
+            }
+        }
+
+
+
+
+.main-footer {
+    background: linear-gradient(90deg, #045cb0, #045cb0, #045cb0, #f00e1c, #ec322d);
+    color: white; /* Define el color de texto de todo el footer. */
+    padding-top: 40px; /* Espacio interno superior. */
+    padding-bottom: 20px; /* Espacio interno inferior. */
+    border-top-left-radius: 0.5rem; /* Redondea la esquina superior izquierda. */
+    border-top-right-radius: 0.5rem; /* Redondea la esquina superior derecha. */
+    margin-top: 2rem; /* Margen superior. */
+
+}
+
+.footer-content-wrapper {
+    display: flex; /* Usa Flexbox para organizar el contenido interno. */
+    justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos. */
+    align-items: flex-start; /* Alinea los elementos en la parte superior. */
+    max-width: 1200px; /* Ancho máximo para el contenido. */
+    margin: 0 auto; /* Centra el contenedor horizontalmente. */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea. */
+    gap: 30px; /* Espacio entre los elementos flexibles. */
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra. */
+}
+
+.footer-logo-container {
+    min-width: 200px; /* Ancho mínimo para este contenedor. */
+    text-align: left; /* Alinea el texto a la izquierda. */
+    flex-grow: 1; /* Permite que el contenedor crezca para ocupar el 
+    espacio disponible. */
+}
+
+.footer-logo {
+    width: 480px; /* Establece un ancho para el logo. */
+    max-width: 100%; /* Asegura que el logo nunca sea más grande que su contenedor. */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    display: block; /* Muestra la imagen como un bloque. */
+}
+
+.footer-section {
+    text-align: left; /* Alinea el texto de la sección a la izquierda. */
+    padding: 0 15px; /* Espacio interno lateral. */
+    flex-grow: 1; /* Permite que la sección crezca para ocupar el espacio disponible. */
+    min-width: 200px; /* Ancho mínimo para cada sección. */
+    box-sizing: border-box; /* Incluye padding en el ancho total. */
+}
+
+.footer-section h4 {
+    font-size: 1em; /* Tamaño de la fuente del título de la sección. */
+    margin-bottom: 8px; /* Margen inferior. */
+    color: #faf6f6; /* Color del texto del título. */
+    font-weight: normal; /* Grosor de la fuente. */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas. */
+    text-align: center;
+
+}
+
+.footer-section p {
+    margin: 0; /* Elimina el margen de los párrafos. */
+    font-size: 0.95em; /* Tamaño de la fuente. */
+    line-height: 1.4; /* Espaciado entre líneas. */
+}
+
+.phone-number {
+    font-size: 1.5em; /* Tamaño de la fuente del número de teléfono. */
+    font-weight: bold; /* Hace el texto más grueso. */
+    margin-bottom: 5px; /* Margen inferior. */
+    text-align: center;
+}
+
+.note {
+    font-size: 0.8em; /* Tamaño de la fuente de la nota. */
+    opacity: 0.8; /* Hace que el texto sea ligeramente transparente. */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex; /* Usa Flexbox para alinear los íconos. */
+    gap: 15px; /* Espacio entre cada ícono. */
+    margin-top: 10px; /* Margen superior. */
+    justify-content: center; /* Alinea los íconos al inicio del contenedor. */
+}
+
+.social-icons img {
+    width: 40px; /* Ancho de los íconos. */
+    height: auto; /* La altura se ajusta automáticamente. */
+}
+
+.social-icons a:hover img {
+    transform: translateY(-3px); /* Mueve el ícono 3px hacia arriba 
+    al pasar el mouse. */
+}
+
+.libro img {
+    width: 150px; /* Ancho de la imagen del libro. */
+    height: auto; /* La altura se ajusta automáticamente. */
+    display: block; /* Muestra la imagen como un bloque. */
+    margin: 0 auto; /* Centra la imagen horizontalmente. */
+}
+.main-footer .linea1 {
+    
+    border-top: 1px solid rgb(255, 255, 255); /* Crea una línea superior semitransparente. */
+    width: 90%; /* Ancho de la línea. */
+    max-width: 1200px; /* Ancho máximo. */
+    margin: 30px auto 15px auto; /* Centra la línea y le da margen vertical. */
+}
+
+.fin p {
+    text-align: center; /* Centra el texto. */
+    margin: 5px 0; /* Espacio vertical entre los párrafos. */
+}
+
+/* RESPONSIVE */
+/* 1. Tabletas y Pantallas Medianas (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* El contenedor principal pasa de 3 columnas a 2: Contenido + Sidebar Derecha */
+    .page-wrapper {
+        grid-template-columns: 1fr 250px; /* Desaparece la sidebar izquierda */
+        padding: 0 10px;
+    }
+
+    /* La sidebar izquierda se oculta en el flujo principal */
+    .sidebar-left {
+        display: none;
+    }
+
+    /* Navegación */
+    .nav-menu {
+        gap: 20px; /* Reducimos el espacio entre ítems del menú */
+    }
+    .nav-menu li a {
+        font-size: 1.1em;
+    }
+
+    /* Pilares Educativos (4 columnas a 2) */
+    .main-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* 2. Móviles y Pantallas Pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
+    /* El contenedor principal pasa a 1 columna vertical */
+    .page-wrapper {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    /* La sidebar de la derecha se mueve después del contenido principal */
+    .sidebar-calendar {
+        position: static; /* Deja de ser sticky */
+        order: 3; /* Se coloca al final */
+        margin-top: 20px;
+        padding: 20px;
+        background: white; /* Asegura un fondo si no lo tiene */
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* El contenido principal va primero */
+    .main-content {
+        order: 1;
+        padding: 15px;
+    }
+
+    /* Reaparece la sidebar izquierda para colocarse antes de la derecha, pero después del main */
+    .sidebar-left {
+        display: block;
+        position: static; /* Deja de ser sticky */
+        order: 2; /* Se coloca en segundo lugar */
+        margin-top: 20px;
+    }
+    .sidebar-left h3 {
+        text-align: center; /* Títulos alineados a al medio para un mejor flujo */
+        border-bottom: 2px solid #f00e1c;
+    }
+    /* Aseguramos que los info-box tengan espacio */
+    .info-box {
+        margin-top: 10px;
+    }
+
+
+    /* HEADER: Ajustes de Logo y Menú */
+    .logo-section img {
+        height: 100px; /* Logo más pequeño en móvil */
+    }
+
+    /* Menú de Navegación: Pasa a ser vertical (o un menú hamburguesa, si tienes JS) */
+
+
+    
+    /* Media Query para Móviles (ejemplo: hasta 768px) */
+@media (max-width: 768px) {
+    /* ... (Otros estilos responsive) ... */
+
+    /* Centra la lista completa (ul) */
+    .nav-menu {
+        display: flex; /* Usamos flexbox para centrar sus elementos */
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* **CENTRA HORIZONTALMENTE** los elementos li */
+        padding: 10px 0; /* Ajusta el padding si es necesario */
+        list-style: none; /* Asegura que no haya viñetas */
+    }
+
+    /* Ajusta el texto de los enlaces (a) */
+    .nav-menu li {
+        width: 100%; /* Opcional: Hace que cada li ocupe todo el ancho para centrar el texto dentro */
+        text-align: center; /* **CENTRA EL TEXTO** dentro de cada elemento li */
+        margin: 5px 0; /* Añade un pequeño espacio vertical entre los elementos */
+    }
+
+    /* ... (Resto de tus estilos responsive) ... */
+}
+
+
+
+    /* Pilares Educativos (2 columnas a 1) */
+    .main-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    /* Niveles (Tarjetas) */
+    .niveles-container {
+        gap: 1rem;
+    }
+    .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 350px; /* Limita el ancho máximo si es necesario */
+    }
+    .card img {
+        height: 150px; /* Reducimos la altura de la imagen */
+    }
+
+    /* Ajuste de títulos */
+    .containerh1 {
+        font-size: 2rem;
+    }
+    .containerp {
+        font-size: 1.1rem;
+    }
+
+    /* Botones flotantes (WhatsApp, TikTok): Mover y reducir */
+    svg {
+        width: 50px; /* Reduce el tamaño */
+        height: 70px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .tiktoksvg {
+        width: 50px; /* Reduce el tamaño */
+        height: 45px;
+        bottom: 70px; /* Mueve más arriba */
+        right: 10px;
+    }
+}
+
+/* 3. Footer en Móvil */
+@media (max-width: 600px) {
+    .footer-content-wrapper {
+        flex-direction: column; /* Apila el contenido del footer */
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section, .libro {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer-logo-container, .libro {
+        order: 1; /* Pone el logo y libro al inicio (opcional) */
+        margin-bottom: 30px;
+    }
+    .footer-section.social-media {
+        order: 3;
+    }
+    .footer-section.admission {
+        order: 2;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}

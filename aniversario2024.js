@@ -1,0 +1,164 @@
+// Array SOLO con las imágenes que EXISTEN en tu carpeta
+const imageSources = [
+    'images/Aniversario 2024/1.jpg',
+    'images/Aniversario 2024/2.jpg',
+    'images/Aniversario 2024/3.jpg',
+    'images/Aniversario 2024/4.jpg',
+    'images/Aniversario 2024/5.jpg',
+    'images/Aniversario 2024/6.jpg',
+    'images/Aniversario 2024/7.jpg',
+    'images/Aniversario 2024/8.jpg',
+    'images/Aniversario 2024/9.jpg',
+    'images/Aniversario 2024/10.jpg',
+    'images/Aniversario 2024/11.jpg',
+    'images/Aniversario 2024/12.jpg',
+    'images/Aniversario 2024/13.jpg',
+    'images/Aniversario 2024/14.jpg',
+    'images/Aniversario 2024/15.jpg',
+    'images/Aniversario 2024/16.jpg',
+    'images/Aniversario 2024/17.jpg',
+    'images/Aniversario 2024/18.jpg',
+    'images/Aniversario 2024/19.jpg',
+    'images/Aniversario 2024/20.jpg',
+    'images/Aniversario 2024/21.jpg',
+    'images/Aniversario 2024/22.jpg',
+    'images/Aniversario 2024/23.jpg',
+    'images/Aniversario 2024/24.jpg',
+    'images/Aniversario 2024/25.jpg',
+    'images/Aniversario 2024/26.jpg',
+    'images/Aniversario 2024/27.jpg',
+    'images/Aniversario 2024/28.jpg',
+    'images/Aniversario 2024/29.jpg',
+    'images/Aniversario 2024/30.jpg',
+    'images/Aniversario 2024/31.jpg',
+    'images/Aniversario 2024/32.jpg',
+    'images/Aniversario 2024/33.jpg',
+    'images/Aniversario 2024/34.jpg',
+    'images/Aniversario 2024/35.jpg',
+    'images/Aniversario 2024/36.jpg',
+    'images/Aniversario 2024/37.jpg',
+    'images/Aniversario 2024/38.jpg',
+    'images/Aniversario 2024/39.jpg',
+    'images/Aniversario 2024/40.jpg',
+    'images/Aniversario 2024/41.jpg',
+    'images/Aniversario 2024/42.jpg',
+    'images/Aniversario 2024/43.jpg',
+    'images/Aniversario 2024/44.jpg',
+    'images/Aniversario 2024/45.jpg',
+    'images/Aniversario 2024/46.jpg',
+    'images/Aniversario 2024/47.jpg',
+    'images/Aniversario 2024/48.jpg',
+    'images/Aniversario 2024/49.jpg',
+    'images/Aniversario 2024/50.jpg',
+    'images/Aniversario 2024/51.jpg',
+    'images/Aniversario 2024/52.jpg',
+    'images/Aniversario 2024/53.jpg',   
+    'images/Aniversario 2024/54.jpg',
+    'images/Aniversario 2024/55.jpg',
+    'images/Aniversario 2024/56.jpg',
+    'images/Aniversario 2024/57.jpg',
+    'images/Aniversario 2024/58.jpg',
+    'images/Aniversario 2024/59.jpg',
+    'images/Aniversario 2024/60.jpg',
+    'images/Aniversario 2024/61.jpg',
+    'images/Aniversario 2024/62.jpg',
+    'images/Aniversario 2024/63.jpg',
+    'images/Aniversario 2024/64.jpg',
+];
+
+const gallery = document.getElementById('gallery');
+const largeImageContainer = document.getElementById('largeImageContainer');
+let activeImageIndex = -1;
+
+// Función para verificar si una imagen existe
+function checkImageExists(src, callback) {
+    const img = new Image();
+    img.onload = function() { callback(true); };
+    img.onerror = function() { callback(false); };
+    img.src = src;
+}
+
+// Función para cargar solo las imágenes que existen
+function loadExistingImages() {
+    const existingImages = [];
+    let imagesChecked = 0;
+    
+    imageSources.forEach((src, index) => {
+        checkImageExists(src, (exists) => {
+            imagesChecked++;
+            if (exists) {
+                existingImages.push({ src, originalIndex: index });
+            }
+            
+            // Cuando todas las imágenes han sido verificadas
+            if (imagesChecked === imageSources.length) {
+                // Ordenar por el índice original
+                existingImages.sort((a, b) => a.originalIndex - b.originalIndex);
+                
+                // Crear nuevo array solo con las URLs de las imágenes que existen
+                const validImageSources = existingImages.map(item => item.src);
+                
+                // Renderizar la galería con las imágenes que existen
+                renderGallery(validImageSources);
+            }
+        });
+    });
+}
+
+// Función para generar imágenes en la galería
+function renderGallery(imagesArray = imageSources) {
+    gallery.innerHTML = '';
+    
+    if (imagesArray.length === 0) {
+        largeImageContainer.innerHTML = '<div class="placeholder">No hay imágenes para mostrar</div>';
+        return;
+    }
+    
+    imagesArray.forEach((src, index) => {
+        const imageCard = document.createElement('div');
+        imageCard.className = 'image-card';
+        if (index === activeImageIndex) {
+            imageCard.classList.add('active');
+        }
+        
+        const imageContainer = document.createElement('div');
+        imageContainer.className = 'image-container';
+        
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.loading = 'lazy';
+        
+        imageContainer.appendChild(img);
+        imageCard.appendChild(imageContainer);
+        
+        // Añadir evento de clic
+        imageCard.addEventListener('click', () => {
+            showLargeImage(index, imagesArray);
+        });
+        
+        gallery.appendChild(imageCard);
+    });
+}
+
+// Función para mostrar la imagen en grande
+function showLargeImage(index, imagesArray = imageSources) {
+    if (imagesArray.length === 0) return;
+    
+    activeImageIndex = index;
+    
+    const img = document.createElement('img');
+    img.src = imagesArray[index];
+    img.alt = '';
+    
+    largeImageContainer.innerHTML = '';
+    largeImageContainer.appendChild(img);
+    
+    // Actualizar la galería para resaltar la imagen activa
+    renderGallery(imagesArray);
+}
+
+// Inicializar la galería cuando la página cargue
+document.addEventListener('DOMContentLoaded', function() {
+    loadExistingImages();
+});
