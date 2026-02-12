@@ -195,8 +195,8 @@ body {
         }
 
 .header {
-    background: linear-gradient(white);
-    color: #045cb0;
+    background: linear-gradient(#045cb0);
+    color: #fafafa;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -240,7 +240,7 @@ body {
 }
 
 .nav-menu li a {
-    color: #045cb0;                   /* Color de texto blanco. */
+    color: #ffffff;                   /* Color de texto blanco. */
     text-decoration: none;          /* Quita el subrayado de los enlaces. */
     font-size: 1.5em;                 /* Tamaño de fuente estándar. */
     font-weight: 700;               /* Texto en negrita. */
@@ -253,6 +253,18 @@ body {
     background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco transparente al pasar el ratón. */
     color: #ffc107;                 /* Color de texto amarillo/ámbar al pasar el ratón. */
 }
+
+/* Botón Hamburguesa */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
 /* CONTENEDOR PRINCIPAL CON GRID - Debajo del header */
 .page-container {
     display: grid;
@@ -443,7 +455,7 @@ h5 {
 }
 
 .event-info h4 {
-    color: #045cb0;
+    color: #f8f8f8;
     font-size: 0.95rem;
     margin: 0 0 5px 0;
 }
@@ -758,7 +770,7 @@ h2 {
 }
 
 .social-sidebar h4 {
-    color: #045cb0;                   /* Texto blanco */
+    color: #fefefe;                   /* Texto blanco */
     margin-bottom: 15px;            /* Espacio de 15px debajo */
 }
 
@@ -802,8 +814,8 @@ h2 {
 
 
 .main-footer {
-    background: linear-gradient(white);
-    color: #045cb0; /* Define el color de texto de todo el footer. */
+    background: linear-gradient(#045cb0);
+    color: white; /* Define el color de texto de todo el footer. */
     padding-top: 40px; /* Espacio interno superior. */
     padding-bottom: 20px; /* Espacio interno inferior. */
     border-top-left-radius: 0.5rem; /* Redondea la esquina superior izquierda. */
@@ -848,7 +860,7 @@ h2 {
 .footer-section h4 {
     font-size: 1em; /* Tamaño de la fuente del título de la sección. */
     margin-bottom: 8px; /* Margen inferior. */
-    color: #045cb0; /* Color del texto del título. */
+    color: white; /* Color del texto del título. */
     font-weight: normal; /* Grosor de la fuente. */
     text-transform: uppercase; /* Convierte el texto a mayúsculas. */
     text-align: center;
@@ -893,7 +905,7 @@ h2 {
 }
 .main-footer .linea1 {
     border: none;
-    border-top: 1px solid #045cb0; /* Crea una línea superior celeste. */
+    border-top: 1px solid white; /* Crea una línea superior celeste. */
     width: 90%; /* Ancho de la línea. */
     max-width: 1200px; /* Ancho máximo. */
     margin: 30px auto 15px auto; /* Centra la línea y le da margen vertical. */
@@ -993,11 +1005,22 @@ h2 {
 
     /* Centra la lista completa (ul) */
     .nav-menu {
-        display: flex; /* Usamos flexbox para centrar sus elementos */
+        display: none; /* Oculto por defecto en móvil */
         flex-direction: column; /* Apila los elementos verticalmente */
         align-items: center; /* **CENTRA HORIZONTALMENTE** los elementos li */
         padding: 10px 0; /* Ajusta el padding si es necesario */
         list-style: none; /* Asegura que no haya viñetas */
+        width: 100%;
+        gap: 10px; /* Reduce el espacio entre opciones en móvil */
+    }
+
+    .nav-menu.show {
+        display: flex; /* Se muestra al activar el JS */
+    }
+
+    .hamburger-btn {
+        display: block; /* Visible solo en móvil */
+        margin: 0 auto;
     }
 
     /* Ajusta el texto de los enlaces (a) */
@@ -1009,7 +1032,6 @@ h2 {
 
     /* ... (Resto de tus estilos responsive) ... */
 }
-
 
 
     /* Pilares Educativos (2 columnas a 1) */

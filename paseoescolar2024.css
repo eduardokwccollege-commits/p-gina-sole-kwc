@@ -23,7 +23,7 @@ body {
         
 .header {
     /* Crea un fondo con un degradado horizontal de azul a rojo. */
-    background: linear-gradient(white);
+    background: linear-gradient(#045cb0);
     color: white;                    /* Texto blanco en el encabezado. */
     padding: 20px;                   /* Relleno interno de 20px. */
     border-radius: 10px;
@@ -68,7 +68,7 @@ body {
 }
 
 .nav-menu li a {
-    color: #045cb0;                    /* Color de texto blanco. */
+    color: white;                    /* Color de texto blanco. */
     text-decoration: none;           /* Quita el subrayado de los enlaces. */
     font-size: 1.5em;                  /* Tamaño de fuente estándar. */
     font-weight: 700;                /* Texto en negrita. */
@@ -80,6 +80,17 @@ body {
 .nav-menu li a:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco transparente al pasar el ratón. */
     color: #ffc107;                  /* Color de texto amarillo/ámbar al pasar el ratón. */
+}
+
+/* Botón Hamburguesa */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .main-content {
@@ -284,8 +295,8 @@ body {
 /*Pie de Página*/
 .main-footer {
     /* Mismo degradado de azul a rojo que el encabezado. */
-    background: white;
-    color: #045cb0;                    /* Texto blanco en el pie de página. */
+    background: #045cb0;
+    color: white;                    /* Texto blanco en el pie de página. */
     padding-top: 40px;               /* Relleno superior. */
     padding-bottom: 20px;            /* Relleno inferior. */
     border-top-left-radius: 0.5rem;  /* Redondea la esquina superior izquierda. */
@@ -328,7 +339,7 @@ body {
 .footer-section h4 {
     font-size: 1em;                  /* Tamaño de fuente estándar. */
     margin-bottom: 8px;              /* Margen inferior. */
-    color: #045cb0;                  /* Color de texto casi blanco. */
+    color: white;                  /* Color de texto casi blanco. */
     font-weight: normal;             /* Grosor normal de la fuente. */
     text-transform: uppercase;       /* Convierte el texto a mayúsculas. */
     text-align: center;              /* Centra el título de la sección. */
@@ -379,7 +390,7 @@ body {
 
 .main-footer .linea1 {
     border: none;                    /* Elimina el borde. */
-    border-top: 1px solid #045cb0; /* Crea una línea separadora celeste de 1px. */
+    border-top: 1px solid white; /* Crea una línea separadora celeste de 1px. */
     width: 90%;                      /* Ancho de la línea del 90%. */
     max-width: 1200px;               /* Ancho máximo de la línea. */
     margin: 30px auto 15px auto;     /* Centra la línea y le da margen vertical. */
@@ -400,34 +411,29 @@ body {
     .logo-section {
         margin-bottom: 10px;         /* Ajusta el margen inferior. */
     }
-
-    .nav-menu {
-        justify-content: center;     /* Centra el menú. */
-        gap: 10px;                   /* Reduce el espacio entre enlaces a 10px. */
-        flex-wrap: wrap;             /* Permite que el menú se envuelva en varias líneas. */
-    }
-
-    .fila {
-        flex-direction: column;      /* Apila verticalmente los elementos de la fila. */
-        align-items: center;         /* Centra horizontalmente los elementos apilados. */
-    }
-}
-
-/* Estilos para móviles */
-@media (max-width: 768px) { /* Se aplica cuando la pantalla es de 768px o menos (móvil/tablet). */
-    .header {
-        flex-direction: column;      /* Apila verticalmente los elementos del encabezado. */
-        padding: 15px;               /* Reduce el relleno. */
-    }
-
-    .logo-section {
-        margin-bottom: 10px;         /* Ajusta el margen inferior. */
+     .logo-section img {
+        width: 480px; /* Establece un ancho para el logo. */
+    max-width: 100%; /* Asegura que el logo nunca sea más grande que su contenedor. */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    display: block; /* Muestra la imagen como un bloque. */
     }
 
     .nav-menu {
-        justify-content: center;     /* Centra el menú. */
-        gap: 10px;                   /* Reduce el espacio entre enlaces a 10px. */
-        flex-wrap: wrap;             /* Permite que el menú se envuelva en varias líneas. */
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px; /* Reduce el espacio entre opciones en móvil */
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin: 0 auto;
     }
 
     .fila {
@@ -459,3 +465,30 @@ body {
         padding-bottom: 15px;
     }
 }    
+
+/* Footer Responsive */
+@media (max-width: 600px) {
+    .footer-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section, .libro {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer-logo-container, .libro {
+        order: 1; /* Pone el logo y libro al inicio (opcional) */
+        margin-bottom: 30px;
+    }
+    .footer-section.social-media {
+        order: 3;
+    }
+    .footer-section.admission {
+        order: 2;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
